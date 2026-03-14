@@ -302,6 +302,34 @@ multiApp f gs x = f [ g x | g <- gs ]
 -- The suprise will only work if you generate the return list directly
 -- using (:). If you build the list in an argument to a helper
 -- function, the surprise won't work. See section 3.8 in the material.
+-- interpreter :: [String] -> [Int] -> [String]
+interpreter [] [x,y] seq = seq 
+interpreter (cmd:rest) [x,y] seq = interpreter rest (parse cmd [x,y]) (move cmd [x,y] seq)
+  where
+    move cmd [x,y] seq = case cmd of 
+      "up"     -> ["hi"] 
+      "down"   -> []
+      "left"   -> []
+      "right"  -> []
+      "printX" -> [show x]
+      "printY" -> [show y]
 
-interpreter :: [String] -> [String]
-interpreter commands =  
+    parse cmd [x,y] = case cmd of 
+      "up"     -> [x, (y+1)]
+      "down"   -> [x, (y-1)]
+      "left"   -> [(x-1),y]
+      "right"  -> [(x+1),y]
+      "printX" -> [x, y]
+      "printY" -> [x, y]
+
+interpreter' cmds = go cmds 0 0 []
+  where
+    -- go :: [String] -> Int -> Int -> [String] -> [String]
+    go [] x y output = reverse output
+    go (cmd:rest) x y output = case cmd of
+      "up"     -> go rest x (y+1) output
+      "down"   -> go rest x (y-1) output
+      "left"   -> go rest (x-1) y output
+      "right"  -> go rest (x+1) y output
+      "printX" -> go rest x y (show x : output)
+      "printY" -> go rest x y (show y : output)
