@@ -50,7 +50,14 @@ buildList x n e = x : buildList x (n-1) e
 -- Ps. you'll probably need a recursive helper function
 
 sums :: Int -> [Int]
-sums i = todo
+sums a = go 1 0
+  where 
+    go :: Int -> Int -> [Int]
+    go n i
+      | n == a = [acc]
+      | otherwise = acc : go (n+1) acc 
+      where acc = n + i
+
 
 ------------------------------------------------------------------------------
 -- Ex 3: define a function mylast that returns the last value of the
