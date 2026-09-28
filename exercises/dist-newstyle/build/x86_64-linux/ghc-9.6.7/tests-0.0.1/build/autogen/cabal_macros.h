@@ -20,15 +20,15 @@
   (major1) == 4000 && (major2) <  4 || \
   (major1) == 4000 && (major2) == 4 && (minor) <= 1)
 #endif /* MIN_VERSION_HTTP */
-/* package JuicyPixels-3.3.7 */
+/* package JuicyPixels-3.3.9 */
 #ifndef VERSION_JuicyPixels
-#define VERSION_JuicyPixels "3.3.7"
+#define VERSION_JuicyPixels "3.3.9"
 #endif /* VERSION_JuicyPixels */
 #ifndef MIN_VERSION_JuicyPixels
 #define MIN_VERSION_JuicyPixels(major1,major2,minor) (\
   (major1) <  3 || \
   (major1) == 3 && (major2) <  3 || \
-  (major1) == 3 && (major2) == 3 && (minor) <= 7)
+  (major1) == 3 && (major2) == 3 && (minor) <= 9)
 #endif /* MIN_VERSION_JuicyPixels */
 /* package QuickCheck-2.14.3 */
 #ifndef VERSION_QuickCheck
@@ -60,9 +60,9 @@
   (major1) == 4 && (major2) <  18 || \
   (major1) == 4 && (major2) == 18 && (minor) <= 3)
 #endif /* MIN_VERSION_base */
-/* package bytestring-0.11.5.4 */
+/* package bytestring-0.11.5.3 */
 #ifndef VERSION_bytestring
-#define VERSION_bytestring "0.11.5.4"
+#define VERSION_bytestring "0.11.5.3"
 #endif /* VERSION_bytestring */
 #ifndef MIN_VERSION_bytestring
 #define MIN_VERSION_bytestring(major1,major2,minor) (\
@@ -90,25 +90,25 @@
   (major1) == 1 && (major2) <  5 || \
   (major1) == 1 && (major2) == 5 && (minor) <= 0)
 #endif /* MIN_VERSION_generic_random */
-/* package hspec-2.11.16 */
+/* package hspec-2.11.10 */
 #ifndef VERSION_hspec
-#define VERSION_hspec "2.11.16"
+#define VERSION_hspec "2.11.10"
 #endif /* VERSION_hspec */
 #ifndef MIN_VERSION_hspec
 #define MIN_VERSION_hspec(major1,major2,minor) (\
   (major1) <  2 || \
   (major1) == 2 && (major2) <  11 || \
-  (major1) == 2 && (major2) == 11 && (minor) <= 16)
+  (major1) == 2 && (major2) == 11 && (minor) <= 10)
 #endif /* MIN_VERSION_hspec */
-/* package http-types-0.12.3 */
+/* package http-types-0.12.4 */
 #ifndef VERSION_http_types
-#define VERSION_http_types "0.12.3"
+#define VERSION_http_types "0.12.4"
 #endif /* VERSION_http_types */
 #ifndef MIN_VERSION_http_types
 #define MIN_VERSION_http_types(major1,major2,minor) (\
   (major1) <  0 || \
   (major1) == 0 && (major2) <  12 || \
-  (major1) == 0 && (major2) == 12 && (minor) <= 3)
+  (major1) == 0 && (major2) == 12 && (minor) <= 4)
 #endif /* MIN_VERSION_http_types */
 /* package parallel-3.2.2.0 */
 #ifndef VERSION_parallel
@@ -120,15 +120,15 @@
   (major1) == 3 && (major2) <  2 || \
   (major1) == 3 && (major2) == 2 && (minor) <= 2)
 #endif /* MIN_VERSION_parallel */
-/* package sqlite-simple-0.4.18.2 */
+/* package sqlite-simple-0.4.19.0 */
 #ifndef VERSION_sqlite_simple
-#define VERSION_sqlite_simple "0.4.18.2"
+#define VERSION_sqlite_simple "0.4.19.0"
 #endif /* VERSION_sqlite_simple */
 #ifndef MIN_VERSION_sqlite_simple
 #define MIN_VERSION_sqlite_simple(major1,major2,minor) (\
   (major1) <  0 || \
   (major1) == 0 && (major2) <  4 || \
-  (major1) == 0 && (major2) == 4 && (minor) <= 18)
+  (major1) == 0 && (major2) == 4 && (minor) <= 19)
 #endif /* MIN_VERSION_sqlite_simple */
 /* package template-haskell-2.20.0.0 */
 #ifndef VERSION_template_haskell
@@ -150,45 +150,45 @@
   (major1) == 2 && (major2) <  0 || \
   (major1) == 2 && (major2) == 0 && (minor) <= 2)
 #endif /* MIN_VERSION_text */
-/* package th-abstraction-0.4.5.0 */
+/* package th-abstraction-0.5.0.0 */
 #ifndef VERSION_th_abstraction
-#define VERSION_th_abstraction "0.4.5.0"
+#define VERSION_th_abstraction "0.5.0.0"
 #endif /* VERSION_th_abstraction */
 #ifndef MIN_VERSION_th_abstraction
 #define MIN_VERSION_th_abstraction(major1,major2,minor) (\
   (major1) <  0 || \
-  (major1) == 0 && (major2) <  4 || \
-  (major1) == 0 && (major2) == 4 && (minor) <= 5)
+  (major1) == 0 && (major2) <  5 || \
+  (major1) == 0 && (major2) == 5 && (minor) <= 0)
 #endif /* MIN_VERSION_th_abstraction */
-/* package transformers-0.5.6.2 */
+/* package transformers-0.6.1.0 */
 #ifndef VERSION_transformers
-#define VERSION_transformers "0.5.6.2"
+#define VERSION_transformers "0.6.1.0"
 #endif /* VERSION_transformers */
 #ifndef MIN_VERSION_transformers
 #define MIN_VERSION_transformers(major1,major2,minor) (\
   (major1) <  0 || \
-  (major1) == 0 && (major2) <  5 || \
-  (major1) == 0 && (major2) == 5 && (minor) <= 6)
+  (major1) == 0 && (major2) <  6 || \
+  (major1) == 0 && (major2) == 6 && (minor) <= 1)
 #endif /* MIN_VERSION_transformers */
-/* package wai-3.2.3 */
+/* package wai-3.2.4 */
 #ifndef VERSION_wai
-#define VERSION_wai "3.2.3"
+#define VERSION_wai "3.2.4"
 #endif /* VERSION_wai */
 #ifndef MIN_VERSION_wai
 #define MIN_VERSION_wai(major1,major2,minor) (\
   (major1) <  3 || \
   (major1) == 3 && (major2) <  2 || \
-  (major1) == 3 && (major2) == 2 && (minor) <= 3)
+  (major1) == 3 && (major2) == 2 && (minor) <= 4)
 #endif /* MIN_VERSION_wai */
-/* package warp-3.3.23 */
+/* package warp-3.3.31 */
 #ifndef VERSION_warp
-#define VERSION_warp "3.3.23"
+#define VERSION_warp "3.3.31"
 #endif /* VERSION_warp */
 #ifndef MIN_VERSION_warp
 #define MIN_VERSION_warp(major1,major2,minor) (\
   (major1) <  3 || \
   (major1) == 3 && (major2) <  3 || \
-  (major1) == 3 && (major2) == 3 && (minor) <= 23)
+  (major1) == 3 && (major2) == 3 && (minor) <= 31)
 #endif /* MIN_VERSION_warp */
 
 /* tool cpphs-1.20.9 */
