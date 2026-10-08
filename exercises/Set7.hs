@@ -296,25 +296,29 @@ passwordAllowed pass (Or req1 req2) =
 --
 
 data Arithmetic = Number Integer
-                | Add Integer Integer
-                | Mult Integer Integer
+                | Add Arithmetic Arithmetic
+                | Mult Arithmetic Arithmetic
   deriving Show
 
 literal :: Integer -> Arithmetic
 literal n = Number n
 
 operation :: String -> Arithmetic -> Arithmetic -> Arithmetic
-operation "+" (Number a) (Number b) = Add a b
-operation "+" a (Number b) = Add a b
+operation "+" (Number a) (Number b) = Add (Number a) (Number b)
+operation "*" (Number a) (Number b) = Mult (Number a) (Number b)
 
-operation "*" (Number a) (Number b) = Mult a b
+operation op a b  = opParsed a b
+  where opParsed | op == "+" = Add
+                 | otherwise = Mult
 
 evaluate :: Arithmetic -> Integer
 evaluate (Number n) = n
-evaluate (Add a b) = a + b
-evaluate (Mult a b) = a * b
+evaluate (Add (Number a) (Number b)) = a + b
+evaluate (Add a b) = evaluate a + evaluate b
+evaluate (Mult (Number a) (Number b)) = a * b
+evaluate (Mult a b) = evaluate a * evaluate b
 
 render :: Arithmetic -> String
 render (Number n) = show n
-render (Add a b) = concat ["(", show a, "+", show b, ")"]
-render (Mult a b) = concat ["(", show a, "*", show b, ")"]
+render (Add a b) = concat ["(", render a, "+", render b, ")"]
+render (Mult a b) = concat ["(", render a, "*", render b, ")"]
